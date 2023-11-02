@@ -1,0 +1,10 @@
+#include<stdio.h>
+int main(){
+    int a,b;
+    scanf("%d%d",&a,&b);
+    int min_socks=a<b?a:b;
+    int max_diff=min_socks;
+    int same_socks=(a-min_socks)/(2)+(b-min_socks)/2;
+    printf("%d %d",max_diff,same_socks);
+    return 0;
+}
