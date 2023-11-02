@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main(){
+    
+    int noofcases;
+    int a,b;
+
+    scanf("%d", &noofcases);
+    for( int i=0;i<noofcases;i++){
+        scanf("%d%d",&a,&b);
+        int y = a%b==0?0:b-(a%b);
+    
+        printf("%d\n",y);
+    }
+    
+    return 0;
+    
+}
