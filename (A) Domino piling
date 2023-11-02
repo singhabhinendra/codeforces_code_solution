@@ -1,0 +1,12 @@
+#include<stdio.h>
+int main(){
+    int M,N;
+    scanf("%d%d",&M,&N);
+    int j;
+    j=M*N;
+    printf("%d",j/2);
+   
+    return 0;
+    
+}
+
