@@ -1,0 +1,18 @@
+#include <stdio.h>
+int main() {
+    int Y, W;
+    scanf("%d %d", &Y, &W);
+    int max_roll = (Y > W) ? Y : W;
+    int numerator = 6 - max_roll + 1;
+    int denominator = 6;
+    int a = numerator, b = denominator, temp;
+    while (b != 0) {
+        temp = a % b;
+        a = b;
+        b = temp;
+    }
+    numerator /= a;
+    denominator /= a;
+    printf("%d/%d\n", numerator, denominator);
+    return 0;
+}
