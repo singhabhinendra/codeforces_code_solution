@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main()
+{
+    long long n,m,a,res;
+     scanf("%lli%lli%lli",&n,&m,&a);
+    long long no=n/a;
+    long long mo=m/a;
+    if(n%a!=0)
+        no++;
+    if(m%a!=0)
+        mo++;
+    res=mo*no;
+    printf("%lli",res);
+    return 0;
+}
