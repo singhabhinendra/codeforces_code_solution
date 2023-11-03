@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+    int n, m;
+    scanf("%d %d", &n, &m);
+
+    int given = 0;
+    int x = 1;
+
+    while (m >= x) {
+        m -= x;
+        x = (x % n) + 1;
+    }
+    printf("%d\n", m);
+    return 0;
+}
