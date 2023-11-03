@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char players[101];
+    scanf("%s", players);
+
+    int length = strlen(players);
+    int consecutive_count = 1;
+    char current_player = players[0];
+    int dangerous = 0;
+
+    for (int i = 1; i < length; i++) {
+        if (players[i] == current_player) {
+            consecutive_count++;
+        } else {
+            consecutive_count = 1;
+            current_player = players[i];
+        }
+
+        if (consecutive_count >= 7) {
+            dangerous = 1;
+            break;
+        }
+    }
+
+    if (dangerous) {
+        printf("YES\n");
+    } else {
+        printf("NO\n");
+    }
+
+    return 0;
+}
